@@ -10,8 +10,8 @@ class Soup:
 
     def __generate_soup_obj(self):
         response = urlopen(self.url)  # requisição.
-        html = response.read().decode("utf-8")
-        return BeautifulSoup(html, "html.parser")
+        html = response.read().decode('utf-8')
+        return BeautifulSoup(html, 'html.parser')
 
     def get_soup_html(self, prettify: bool = False):
         if prettify:

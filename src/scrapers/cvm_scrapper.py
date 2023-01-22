@@ -25,7 +25,7 @@ class CvmScrapper(ScrapperInterface):
         else:  # caso o objeto BeautifulSoup tenha sido obtido por outro objeto BeautifulSoup.
             return another_soup.find_all(html_tags, {'class': tag_class})
 
-    def get_all_links(self) -> List[str] | str:
+    def get_all_links(self) -> List[str]:
         links = []
         for link in self.soup.soup_obj.find_all('a'):
             temp_url = link.get('href')
